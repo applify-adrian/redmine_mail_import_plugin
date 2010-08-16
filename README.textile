@@ -1,0 +1,24 @@
+h1. Email Import
+
+This Redmine plugin adds the possibility to configure certain email addresses to be mapped to users and projects. This is then used for assigning incoming emails to the correct user and project automatically.
+
+h2. Installation
+
+# Copy the mail_import plugin to your redmine plugin directory (vendor/plugins)
+# Apply the Database Schema Migration files by using the following command: rake db:migrate_plugins
+# Restart any running Redmine application servers
+# Configure the email assignment settings in the 'Email' tab of the desired project
+
+h2. Usage
+
+# If a new email arrives whose sender is not an active redmine user, the import mechanism looks up the email assignment configuration. If it finds the senders email address, it changes sender address and project according to the configuration.
+# If no assignment is found for an email address, email import fails and a message is sent to the sender and to a certain address which may be specified.
+
+h2. TODO
+
+Check compatibility with different versions of redmine and different database systems. This plugin was developed for "Redmine 0.9.3.stable (MySQL)".
+
+h2. License
+
+This software is licensed under the GNU GPL v2. See COPYRIGHT and COPYING for details.
+
