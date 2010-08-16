@@ -1,0 +1,9 @@
+<h2><%= l(:label_email_assignment_new) %></h2>
+<p>Use this form to add another assignment from an email address to an existing redmine user.</p>
+
+<% labelled_tabular_form_for :email_assignment, @email_assignment, 
+	:url => { :controller => 'email_assignment', :action => 'new', :project_id => @project },
+    :html => { :id => 'email-form' } do |f| %>
+<%= render :partial => 'email_assignment/form', :locals => { :f => f } %>
+<%= submit_tag l(:button_create) %>
+<% end %>

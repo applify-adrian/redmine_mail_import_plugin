@@ -1,0 +1,13 @@
+<%= error_messages_for 'email_assignment' %>
+<%= f.hidden_field :project_id, :value => params[:project_id] %>
+<div class="box tabular">
+<p><%= f.text_field :email, :required => true, :size => 60 %></p>
+<p>
+  <%= label(:email_assignment, :user_id, "User") %>
+  <% if @users.length > 0 %>
+    <%= collection_select("email_assignment", "user_id", @users, :id, :fullname ) %>
+  <% else %>
+    <%= l(:no_members_in_project) %>
+  <% end %>
+</p>
+</div>

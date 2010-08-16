@@ -1,0 +1,9 @@
+en:
+  field_email: Email
+
+  label_email_assignment_new: Add email assignment
+  label_email_assignment: Email assignment
+  label_email_address: Email address
+  label_assigned_to_user: Assigned to user
+  no_members_in_project: This project has no members
+  

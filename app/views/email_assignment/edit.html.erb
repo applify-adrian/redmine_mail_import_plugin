@@ -1,0 +1,7 @@
+<h2><%=l(:label_email_assignment)%></h2>
+<% labelled_tabular_form_for :email_assignment, @email_assignment,
+	:url => { :action => "edit", :project_id => @project },
+    :html => { :id => 'email-form' } do |f| %>
+<%= render :partial => 'email_assignment/form', :locals => { :f => f } %>
+<%= submit_tag l(:button_save) %>
+<% end if @project %>
